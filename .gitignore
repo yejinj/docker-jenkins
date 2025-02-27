@@ -73,3 +73,31 @@ node_modules/
 .ssh/
 .vim/
 .vscode-server/
+
+# System files
+.lesshst
+.wget-hsts
+
+# NPM
+package-lock.json
+
+# Shell configuration
+.bashrc
+
+# Shell configuration
+.profile
+
+# Git credentials
+.git-credentials
+
+# Dependencies
+/my-node-app/node_modules
+/my-node-app/package-lock.json
+
+# Environment
+/my-node-app/.env
+/my-node-app/.env.*
+
+# Logs
+/my-node-app/logs
+/my-node-app/*.log
