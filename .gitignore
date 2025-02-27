@@ -61,3 +61,5 @@ cursor-server/디렉토리 확인
 udo systemctl restart mongod
 디렉토리 확인
 프로세스 확인
+디렉토리 확인
+프로세스 확인
