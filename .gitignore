@@ -56,8 +56,20 @@ temp/
 *.bak
 
 # Project Specific
-cursor-server/디렉토리 확인
+.cursor-server/
 프로세스 확인
 udo systemctl restart mongod
 디렉토리 확인
 node_modules/
+
+# Local Development Directories
+.cache/
+.config/
+.cursor-server/
+.local/
+.mongodb/
+.npm/
+.nvm/
+.ssh/
+.vim/
+.vscode-server/
