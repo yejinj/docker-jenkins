@@ -18,9 +18,9 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // 테스트 라우트
 app.get('/', (req, res) => {
-    res.json({ 
-        message: '서버가 정상적으로 실행중입니다.',
-        version: '1.0.4'  // 버전 정보
+    res.status(500).json({ 
+        message: '서버 에러 테스트',
+        version: '1.0.4'
     });
 });
 
