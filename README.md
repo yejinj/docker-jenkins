@@ -61,3 +61,4 @@ DELETE /api/users/:id # 사용자 삭제
 # Testing staging branch deployment Thu 27 Feb 2025 10:23:07 AM KST
 # Testing staging branch build Thu 27 Feb 2025 11:34:28 AM KST
 # Testing staging build Thu 27 Feb 2025 11:37:44 AM KST
+# Testing main branch deployment Thu 27 Feb 2025 11:38:47 AM KST
