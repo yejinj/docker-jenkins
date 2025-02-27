@@ -14,7 +14,7 @@
 
 ## 시스템 구성도
 [GitHub Repo] <br>
-→ [Jenkins Pipeline]: CI/CD   <br>  
+→ [Jenkins Pipeline]: CI/CD <br>  
 → [Docker Image]: 이미지 빌드 <br>
 → [Docker Hub]: 이미지 저장   <br>
 → [테스트 자동화] <br>
