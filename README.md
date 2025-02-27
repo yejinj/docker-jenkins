@@ -21,7 +21,6 @@ GitHub Repo <br>
 → 배포 환경: 개발(develop) / 스테이징(staging) / 운영(main)   <br>
 → 모니터링 시스템: 로그 분석 및 알림
 
-
 ## 자동화 트리거
 GitHub Webhook 설정  
 1. **Payload URL**: `http://<Jenkins-IP>:8080/github-webhook/`  
