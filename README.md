@@ -13,13 +13,13 @@
 - **테스트**: Jest, Mocha, Testcontainers  
 
 ## 시스템 구성도
-[GitHub Repo] <br>
-→ [Jenkins Pipeline]: CI/CD <br>
-→ [Docker Image]: 이미지 빌드 <br>
-→ [Docker Hub]: 이미지 저장   <br>
-→ [테스트 자동화] <br>
-→ [배포 환경]: 개발(develop) / 스테이징(staging) / 운영(main)   <br>
-→ [모니터링 시스템]: 로그 분석 및 알림
+GitHub Repo <br>
+→ Jenkins Pipeline: CI/CD <br>
+→ Docker Image: 이미지 빌드 <br>
+→ Docker Hub: 이미지 저장 <br>
+→ 테스트 자동화 <br>
+→ 배포 환경: 개발(develop) / 스테이징(staging) / 운영(main)   <br>
+→ 모니터링 시스템: 로그 분석 및 알림
 
 
 ## 자동화 트리거
