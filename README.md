@@ -17,13 +17,13 @@
 ---
 
 ## 시스템 구성도
-[GitHub Repo]: 소스 코드  
-→ [Jenkins Pipeline]: Jenkinsfile 실행 (CI/CD)  
-→ [Docker Image]: Dockerfile 빌드  
+[GitHub Repo]
+→ [Jenkins Pipeline]: CI/CD    
+→ [Docker Image]: 이미지 빌드
 → [Docker Hub]: 이미지 저장  
-→ [테스트 자동화]: 단위 테스트 & 통합 테스트 실행  
+→ [테스트 자동화]
 → [배포 환경]: 개발(develop) / 스테이징(staging) / 운영(main)  
-→ [모니터링 시스템]: Prometheus & Grafana, 로그 분석 및 알림 시스템  
+→ [모니터링 시스템]: 로그 분석 및 알림
 
 ---
 
