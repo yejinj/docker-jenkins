@@ -39,12 +39,45 @@ GitHub Webhook 설정
 - Node.js 애플리케이션: 3000
 - MongoDB: 27017
 <<<<<<< HEAD
+<<<<<<< HEAD
+# Development Environment
+# Development Environment
+# Development Environment Test
+# Test Build for Development
+# Testing Jenkins Pipeline
+# Testing Jenkins Integration
+# Testing Jenkins Integration
+# Testing New Pipeline Setup
+# Testing HTTPS Connection
+# Testing HTTPS Connection
+# Testing Updated Pipeline
+# Testing Develop Branch
+# Testing New Develop Branch
+=======
+=======
+>>>>>>> 8650e933c44d2dcf954c75fd03910d3baf90193a
 # Testing Main Branch Pipeline
 =======
 >>>>>>> 26f2e912ff485aabd26133e115e2e46eca223436
 # Testing Repository Name Change
 # Testing New GitHub Token
 # Testing New GitHub Token
+<<<<<<< HEAD
+>>>>>>> a0667ebd80768675ad6ebcf5a69ac64d3748b4d2
+# Testing Develop Branch Pipeline
+# Testing Develop Pipeline Configuration
+# Testing Develop Pipeline Configuration
+# Testing Rollback System - First Deploy
+# Testing Rollback System - Failed Deploy
+# Testing Rollback System - Failed Deploy
+# Testing Rollback System - Failed Deploy
+# Testing develop branch build Thu 27 Feb 2025 11:20:20 AM KST
+# Testing develop branch build Thu 27 Feb 2025 11:20:34 AM KST
+# Testing develop branch build Thu 27 Feb 2025 11:26:42 AM KST
+# Testing develop branch build Thu 27 Feb 2025 11:27:06 AM KST
+# Testing develop branch build Thu 27 Feb 2025 11:27:33 AM KST
+# Testing develop branch build Thu 27 Feb 2025 12:58:32 PM KST
+=======
 # Testing New Develop Branch
 # Testing new deployment Wed 26 Feb 2025 04:57:21 PM KST
 # Testing new deployment Wed 26 Feb 2025 04:57:47 PM KST
@@ -63,3 +96,6 @@ GitHub Webhook 설정
 # Testing staging branch deployment Thu 27 Feb 2025 10:23:07 AM KST
 >>>>>>> staging
 # Testing main branch build Thu 27 Feb 2025 11:19:19 AM KST
+>>>>>>> 8650e933c44d2dcf954c75fd03910d3baf90193a
+test
+test

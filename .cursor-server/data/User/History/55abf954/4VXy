@@ -19,3 +19,16 @@
         fi; \
         git push origin $current_branch; \
     }; f"
+    
+    pushall = "!f() { \
+        current_branch=$(git symbolic-ref --short HEAD); \
+        for branch in main develop staging; do \
+            echo \"Pushing to $branch...\"; \
+            git checkout $branch; \
+            git pull origin $branch; \
+            git merge $current_branch -m \"merge: $current_branch into $branch\"; \
+            git push origin $branch; \
+        done; \
+        git checkout $current_branch; \
+        echo \"Returned to $current_branch\"; \
+    }; f"

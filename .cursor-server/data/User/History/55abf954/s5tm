@@ -4,7 +4,7 @@
 [credential]
 	helper = store
 [alias]
-    autopush = "!f() { \
+    test = "!f() { \
         current_branch=$(git symbolic-ref --short HEAD); \
         modified_files=$(git status --porcelain | awk '{print $2}'); \
         if [ -z \"$modified_files\" ]; then \
@@ -12,10 +12,6 @@
             return; \
         fi; \
         git add .; \
-        if [ -z \"$1\" ]; then \
-            git commit -m \"test: $current_branch branch build $(date '+%a %d %b %Y %r %Z')\"; \
-        else \
-            git commit -m \"$1\"; \
-        fi; \
+        git commit -m \"test: $current_branch branch build $(date '+%a %d %b %Y %r %Z')\"; \
         git push origin $current_branch; \
     }; f"
