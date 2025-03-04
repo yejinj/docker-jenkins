@@ -25,7 +25,11 @@ describe('MongoDB CRUD Operations', () => {
     });
 
     beforeEach(async () => {
-        await TestModel.deleteMany({}); // 각 테스트 전에 컬렉션 비우기
+        await TestModel.deleteMany({});  // 데이터베이스 컬렉션 비우기(일치시키기)
+        
+        // 테스트 데이터 생성
+        await TestModel.create({ name: 'item1', value: 1 });
+        await TestModel.create({ name: 'item2', value: 2 });
     });
 
     // Create 테스트
@@ -43,12 +47,6 @@ describe('MongoDB CRUD Operations', () => {
 
     // Read 테스트
     test('should read documents', async () => {
-        // 테스트 데이터 생성
-        await TestModel.create([
-            { name: 'item1', value: 1 },
-            { name: 'item2', value: 2 }
-        ]);
-
         const docs = await TestModel.find();
         expect(docs).toHaveLength(2);
         expect(docs[0].name).toBe('item1');
@@ -86,6 +84,9 @@ describe('MongoDB CRUD Operations', () => {
 
     // 대량 데이터 처리 테스트
     test('should handle bulk operations', async () => {
+        // 기존 데이터 모두 삭제
+        await TestModel.deleteMany({});
+        
         // 100개의 문서 생성
         const docs = Array.from({ length: 100 }, (_, i) => ({
             name: `item${i}`,
