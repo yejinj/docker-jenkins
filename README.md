@@ -20,4 +20,3 @@ GitHub Repo <br>
 → 테스트 자동화 <br>
 → 배포 환경: 개발(develop) / 스테이징(staging) / 운영(main)   <br>
 → 모니터링 시스템: 로그 분석 및 알림
-hello world
