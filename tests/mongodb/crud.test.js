@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { MongoMemoryServer } = require('mongodb-memory-server');
 
 // 테스트용 스키마 정의
 const TestSchema = new mongoose.Schema({
@@ -11,17 +10,12 @@ const TestSchema = new mongoose.Schema({
 const TestModel = mongoose.model('Test', TestSchema);
 
 describe('MongoDB CRUD Operations', () => {
-    let mongoServer;
-    
     beforeAll(async () => {
-        mongoServer = await MongoMemoryServer.create();
-        const mongoUri = mongoServer.getUri();
-        await mongoose.connect(mongoUri);
+        await mongoose.connect('mongodb://localhost:27017/testdb');
     });
 
     afterAll(async () => {
         await mongoose.disconnect();
-        await mongoServer.stop();
     });
 
     beforeEach(async () => {
