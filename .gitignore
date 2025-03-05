@@ -56,4 +56,48 @@ temp/
 *.bak
 
 # Project Specific
-cursor-server/
+.cursor-server/
+프로세스 확인
+udo systemctl restart mongod
+디렉토리 확인
+node_modules/
+
+# Local Development Directories
+.cache/
+.config/
+.cursor-server/
+.local/
+.mongodb/
+.npm/
+.nvm/
+.ssh/
+.vim/
+.vscode-server/
+
+# System files
+.lesshst
+.wget-hsts
+
+# NPM
+package-lock.json
+
+# Shell configuration
+.bashrc
+
+# Shell configuration
+.profile
+
+# Git credentials
+.git-credentials
+
+# Dependencies
+/my-node-app/node_modules
+/my-node-app/package-lock.json
+
+# Environment
+/my-node-app/.env
+/my-node-app/.env.*
+
+# Logs
+/my-node-app/logs
+/my-node-app/*.log
