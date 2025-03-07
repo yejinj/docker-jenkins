@@ -86,6 +86,7 @@ package-lock.json
 
 # Git credentials
 .git-credentials
+.jest.config.js
 
 # Dependencies
 /my-node-app/node_modules
