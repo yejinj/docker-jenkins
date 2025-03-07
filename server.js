@@ -7,17 +7,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log('MongoDB 연결 성공'))
-.catch((err) => console.error('MongoDB 연결 실패:', err));
+.then(() => console.log('MongoDB connected'))
+.catch((err) => console.error('MongoDB connection error:', err));
 
 app.get('/', (req, res) => {
     res.json({ 
-        message: '서버가 정상적으로 실행중입니다.',
+        message: 'Server is running',
         version: '1.0.4'
     });
 });
@@ -26,7 +25,7 @@ app.post('/api/test', async (req, res) => {
   try {
     const testCollection = mongoose.connection.collection('test');
     const result = await testCollection.insertOne({ 
-      message: "테스트 데이터",
+      message: "test data",
       timestamp: new Date() 
     });
     res.json(result);
@@ -54,5 +53,5 @@ app.get('/health', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`서버가 ${PORT} 포트에서 실행중입니다.`);
-}); 
+    console.log(`Server is running at ${PORT} port.`);
+});
