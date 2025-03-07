@@ -57,10 +57,7 @@ temp/
 
 # Project Specific
 .cursor-server/
-프로세스 확인
-udo systemctl restart mongod
-디렉토리 확인
-node_modules/
+docker-jenkins @ cb96656
 
 # Local Development Directories
 .cache/
