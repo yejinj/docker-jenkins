@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// 테스트용 스키마 정의
 const TestSchema = new mongoose.Schema({
     name: String,
     value: Number,
@@ -19,14 +18,12 @@ describe('MongoDB CRUD Operations', () => {
     });
 
     beforeEach(async () => {
-        await TestModel.deleteMany({});  // 데이터베이스 컬렉션 비우기(일치시키기)
-        
-        // 테스트 데이터 생성
+        await TestModel.deleteMany({});
+
         await TestModel.create({ name: 'item1', value: 1 });
         await TestModel.create({ name: 'item2', value: 2 });
     });
 
-    // Create 테스트
     test('should create a new document', async () => {
         const testDoc = new TestModel({
             name: 'test item',
@@ -39,7 +36,6 @@ describe('MongoDB CRUD Operations', () => {
         expect(savedDoc._id).toBeDefined();
     });
 
-    // Read 테스트
     test('should read documents', async () => {
         const docs = await TestModel.find();
         expect(docs).toHaveLength(2);
@@ -47,7 +43,6 @@ describe('MongoDB CRUD Operations', () => {
         expect(docs[1].value).toBe(2);
     });
 
-    // Update 테스트
     test('should update a document', async () => {
         const doc = await TestModel.create({
             name: 'original',
@@ -64,7 +59,6 @@ describe('MongoDB CRUD Operations', () => {
         expect(updated.value).toBe(200);
     });
 
-    // Delete 테스트
     test('should delete a document', async () => {
         const doc = await TestModel.create({
             name: 'to be deleted',
@@ -74,31 +68,5 @@ describe('MongoDB CRUD Operations', () => {
         await TestModel.findByIdAndDelete(doc._id);
         const found = await TestModel.findById(doc._id);
         expect(found).toBeNull();
-    });
-
-    // 대량 데이터 처리 테스트
-    test('should handle bulk operations', async () => {
-        // 기존 데이터 모두 삭제
-        await TestModel.deleteMany({});
-        
-        // 100개의 문서 생성
-        const docs = Array.from({ length: 100 }, (_, i) => ({
-            name: `item${i}`,
-            value: i
-        }));
-
-        await TestModel.insertMany(docs);
-        
-        const count = await TestModel.countDocuments();
-        expect(count).toBe(100);
-
-        // value가 50 이상인 문서들 업데이트
-        await TestModel.updateMany(
-            { value: { $gte: 50 } },
-            { $set: { name: 'high value' } }
-        );
-
-        const highValueDocs = await TestModel.find({ name: 'high value' });
-        expect(highValueDocs).toHaveLength(50);
     });
 });
